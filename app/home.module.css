@@ -1,4 +1,9 @@
-.topBarButton {
+.topBarButton, .topBarButtonSelected{
     border: 1px solid black;
     padding: 4px 16px;
+    border-radius: 4px;
+}
+
+.topBarButtonSelected {
+    background-color: lightblue;
 }
