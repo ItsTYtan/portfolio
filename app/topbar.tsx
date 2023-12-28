@@ -3,8 +3,12 @@
 import styles from '@/app/home.module.css';
 import { Nav } from '@/app/constants';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export default function TopBar({ currentNav } : { currentNav : Nav }) {
+export default function TopBar() {
+
+    const [currentNav, setCurrentNav] = useState(Nav.Home);
+
 
     function ButtonStyle(currentNav : Nav, nextNav: Nav) {
         if (currentNav === nextNav) {
@@ -15,24 +19,27 @@ export default function TopBar({ currentNav } : { currentNav : Nav }) {
     }
 
     return (
-        <section className="flex justify-end align-center h-12 pr-16">
+        <section className="w-full flex justify-end align-center h-12 pr-16">
             <Link
-                className={ButtonStyle(currentNav, Nav.AboutMe)}
+                className={ButtonStyle(currentNav, Nav.Home)}
+                onClick={() => setCurrentNav(Nav.Home)}
                 href='/'
             >
-                About me
+                Home
             </Link>
             <Link 
-                className={ButtonStyle(currentNav, Nav.Internships)}
-                href='/internships'
+                className={ButtonStyle(currentNav, Nav.Experience)}
+                onClick={() => setCurrentNav(Nav.Experience)}
+                href='/experience'
             >
-                Internships
+                Experience
             </Link>
             <Link 
-                className={ButtonStyle(currentNav, Nav.SideProjects)}
-                href='/sideprojects'
+                className={ButtonStyle(currentNav, Nav.Projects)}
+                onClick={() => setCurrentNav(Nav.Projects)}
+                href='/projects'
             >
-                Side projects
+                Projects
             </Link>
         </section>
     )

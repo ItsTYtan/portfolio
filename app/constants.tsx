@@ -1,5 +1,5 @@
 export enum Nav {
-    AboutMe,
-    Internships,
-    SideProjects
+    Home,
+    Experience,
+    Projects
 }

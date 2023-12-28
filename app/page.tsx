@@ -4,13 +4,15 @@ import { Nav } from './constants'
 
 export default function Home() {
   return (
-    <main className=''>
-      <TopBar currentNav={Nav.AboutMe}/>
-      <h2>About me</h2>
-      <h1>Tan Tze Young</h1>
-      <Image src='vercel.svg' width={120} height={120} alt='next.svg' />
-      <p>Hi, I am a y2 computer science student studying at the National University of Singapore</p>
-      <p>I am passionate about designing software and applications that are performant</p>
+    <main className='flex flex-col w-full h-full'>
+      <div className='flex gap-48 justify-center align-center min-h-full'>
+        <div className='my-auto'>
+          <p>Hello</p>
+          <h1 className='text-6xl font-semibold'>I'm <span>Tze Young</span></h1>
+          <p className='mt-4'>Year 2 Computer Science Student</p>
+        </div>
+        <Image className='my-auto' src='/avatar.png' width={400} height={400} alt='/avatar.png' />
+      </div>
     </main>
   )
 }
