@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function page() {
     return(
         <main className='relative w-full h-full'>
-            <h1 className="my-8 text-center">Stuff that I've made across my internships, my time in University and in my own free time.</h1>
+            <h1 className="my-8 text-center">Stuff that I&apos;ve made across my internships, my time in University and in my own free time.</h1>
             <div className='flex flex-row gap-16 justify-center'>
                 <ProjectCard name='[Ba]king [Br]ead' >
                     <div className="m-8">
