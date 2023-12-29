@@ -3,3 +3,5 @@ export enum Nav {
     Experience,
     Projects
 }
+
+ export const BASE_PATH = "/portfolio"

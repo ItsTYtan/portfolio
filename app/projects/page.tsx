@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_PATH } from "../constants";
 
 export default function page() {
     return(
@@ -18,7 +19,7 @@ export default function page() {
                                 <p className="my-auto">Github repository</p>
                             </Link>
                             <Link className="flex align-center gap-1" href="https://ay2324s1-cs2103t-f10-3.github.io/tp/" target='_blank'>
-                                <Image className="my-auto" src="/documentation_icon.png" alt="" width={32} height={32} />
+                                <Image className="my-auto" src={BASE_PATH + "/documentation_icon.png"} alt="" width={32} height={32} />
                                 <p className="my-auto">Documentation</p>
                             </Link>
                         </div>
@@ -41,7 +42,7 @@ export default function page() {
                         </div>
                         
                         <div className="mx-auto px-20">
-                            <Image className="mx-auto" src='/bakingbreadUi.png' alt='/bakingbreadUi.png' width={500} height={500} />
+                            <Image className="mx-auto" src={BASE_PATH+ '/bakingbreadUi.png'} alt='/bakingbreadUi.png' width={500} height={500} />
                         </div>
 
                         <p className="text-center italic color-gray-300">picture of the UI</p>
