@@ -3,8 +3,8 @@ import { BASE_PATH } from './constants'
 
 export default function Home() {
   return (
-    <main className='flex flex-col w-full h-full'>
-      <div className='flex gap-48 justify-center align-center min-h-full'>
+    <main className='w-full h-[95vh]'>
+      <div className='flex flex-wrap gap-48 justify-center align-center min-h-full'>
         <div className='my-auto'>
           <p>Hello</p>
           <h1 className='text-6xl font-semibold'>I&apos;m <span>Tze Young</span></h1>

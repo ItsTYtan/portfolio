@@ -19,27 +19,27 @@ export default function TopBar() {
     }
 
     return (
-        <section className="w-full flex justify-end align-center h-12 pr-16">
+        <section className="pt-2 pl-16 w-full flex align-center h-[5vh] pr-16 gap-2">
             <Link
                 className={ButtonStyle(currentNav, Nav.Home)}
                 onClick={() => setCurrentNav(Nav.Home)}
                 href='/'
             >
-                Home
+                <p className='text-center'>Home</p>
             </Link>
             <Link 
                 className={ButtonStyle(currentNav, Nav.Experience)}
                 onClick={() => setCurrentNav(Nav.Experience)}
                 href='/experience'
             >
-                Experience
+                <p className='text-center'>Experience</p>
             </Link>
             <Link 
                 className={ButtonStyle(currentNav, Nav.Projects)}
                 onClick={() => setCurrentNav(Nav.Projects)}
                 href='/projects'
             >
-                Projects
+                <p className='text-center'>Projects</p>
             </Link>
         </section>
     )

@@ -7,10 +7,10 @@ import { BASE_PATH } from "../constants";
 
 export default function page() {
     return(
-        <main className='relative w-full h-full'>
-            <h1 className="my-8 text-center">Stuff that I&apos;ve made across my internships, my time in University and in my own free time.</h1>
+        <main className='w-full h-[95vh]'>
+            <h1 className="py-8 text-center">Stuff that I&apos;ve made across my internships, my time in University and in my own free time.</h1>
             <div className='flex flex-row gap-16 justify-center'>
-                <ProjectCard name='[Ba]king [Br]ead' >
+                <ProjectCard name='[Ba]king [Br]ead' coverImgRef={BASE_PATH + "/bakingbread_cover.jpg"}>
                     <ProjectHeader name="[Ba]king [Br]ead" repoLink="https://github.com/AY2324S1-CS2103T-F10-3/tp" docsLink="https://ay2324s1-cs2103t-f10-3.github.io/tp/" />
                     
                     <p className="my-2">
@@ -37,7 +37,7 @@ export default function page() {
 
                     <p className="text-center italic color-gray-300">picture of the UI</p>
                 </ProjectCard>
-                <ProjectCard name='"Instagram" for Investors'>
+                <ProjectCard name='"Instagram" for Investors' coverImgRef={BASE_PATH + "/instagram_for_investors_cover.png"}>
                     <ProjectHeader name="&quot;Instagram&quot; for Investors" repoLink="https://github.com/prawnzyy/Orbital2023" docsLink="/orbital_readme.pdf" />
                     <p className="my-2">
                         A mobile application designed as a platform for investors to discuss their investment ideas and manage their portfolios. This was done
@@ -56,23 +56,21 @@ export default function page() {
                     </div>
                     <br/>
 
-                    <div className="flex gap-8 items-end justify-center">
+                    <div className="flex flex-wrap gap-16 items-end justify-center">
                         <div>
                             <Image src={BASE_PATH + "/orbital_poster.png"} alt="" width={350} height={350}/>
                             <p className="text-center italic color-gray-300">picture of our project poster</p>
                         </div>
                         <div>
-                            <div className="flex gap-8">
-                                <Image src={BASE_PATH + "/orbital_Ui_1.png"} alt="" width={200} height={0}/>
-                                <Image src={BASE_PATH + "/orbital_Ui_2.png"} alt="" width={200} height={0}/>  
+                            <div className="flex flex-wrap gap-8">
+                                <Image src={BASE_PATH + "/orbital_Ui_1.png"} alt="" width={150} height={0}/>
+                                <Image src={BASE_PATH + "/orbital_Ui_2.png"} alt="" width={150} height={0}/>  
                             </div>
                             <p className="text-center italic color-gray-300 mt-2">UI of the application</p>
                         </div>
                     </div>
-
-                    
                 </ProjectCard>
-                <ProjectCard name='Satellite Trajectory Simululator'>
+                <ProjectCard name='Satellite Trajectory Simululator' coverImgRef={BASE_PATH + "/satellite_cover.png"}>
                     <ProjectHeader 
                     name="Satellite Trajectory Simulator" 
                     repoLink="https://github.com/ItsTYtan/6DOF-Satellite-propagator" 
@@ -101,10 +99,10 @@ export default function page() {
                     </div>
                     <br/>
 
-                    <div className="flex flex-row justify-center gap-8 mt-auto">
-                        <Image className="ml-4" src={BASE_PATH + "/satellite_propagator_diagram.png"} alt="" width={400} height={400} />
+                    <div className="flex flex-wrap justify-center gap-8 mt-auto items-end">
+                        <Image className="ml-4" src={BASE_PATH + "/satellite_propagator_diagram.png"} alt="" width={350} height={350} />
                         <div>
-                            <video width="400" src={BASE_PATH + "/satellite_video.mp4"} autoPlay loop>
+                            <video className="mx-auto" width="350" src={BASE_PATH + "/satellite_video.mp4"} autoPlay loop>
                                 <source src={BASE_PATH + "/satellite_video.mp4"} type="video/mp4" /> 
                             </video>
                             <p className="text-center italic color-gray-300 mt-2">actual simulation of a satellite with the &quot;shuttlecock&quot; confiuguration</p>
@@ -119,9 +117,13 @@ export default function page() {
 }
 
 function ProjectCard({
-    name, children
+    name, 
+    coverImgRef, 
+    children
 }: {
-    name: string, children: React.ReactNode
+    name: string,
+    coverImgRef: string, 
+    children: React.ReactNode
 }) {
 
     const [showContent, setShowContent] = useState(false);
@@ -129,29 +131,29 @@ function ProjectCard({
     return(
         <>
             <button 
-                className="w-64 h-80 border-2 border-black rounded-xl"
+                className="w-64 h-80 rounded-xl bg-gray-200 shadow-md"
                 onClick={() => setShowContent(true)}
             >
-            <div className="h-4/5">
-                {/* <Image /> */}
+            <div className="h-4/5 overflow-hidden p-4">
+                <Image className="h-full rounded-md border-black border-2" src={coverImgRef} alt="" width={288} height={0} />
             </div>
-            <div className="h-1/5 border-t border-gray-700" >
-                <p className="text-center">
+            <div className="h-1/5 border-t border-gray-700 flex align-center justify-center mx-auto" >
+                <p className="text-center text-blue-600 font-semibold my-auto text-lg px-2">
                     {name}
                 </p>
             </div>
-        </button>
-        {showContent && 
-            <>
-            <button 
-                className="bg-gray-700 opacity-50 fixed top-1/2 left-1/2 origin-top-left -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] border border-black" 
-                onClick={() => setShowContent(false)}
-            />
-            <div className="absolute bg-white w-1/2 h-[90vh] top-1/2 left-1/2 origin-top-left -translate-x-1/2 -translate-y-1/2 rounded-xl p-8">
-                {children}
-            </div>
-            </>
-        }
+            </button>
+            {showContent && 
+                <>
+                <button 
+                    className="bg-gray-700 opacity-50 fixed top-1/2 left-1/2 origin-top-left -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] border border-black" 
+                    onClick={() => setShowContent(false)}
+                />
+                <div className="absolute bg-white w-1/2 h-[90vh] top-1/2 left-1/2 origin-top-left -translate-x-1/2 -translate-y-1/2 rounded-xl p-8">
+                    {children}
+                </div>
+                </>
+            }
         </>
     )
 }
@@ -169,13 +171,13 @@ function ProjectHeader({
         <>
         <div className="flex w-full align-center gap-8">
             <h1 className="text-3xl font-semibold mb-2">{name}</h1>
-            <Link className="flex ml-auto align-center gap-2" href={repoLink} target='_blank'>
+            <Link className="flex ml-auto align-center gap-2 hover:bg-gray-300 px-2 rounded-lg" href={repoLink} target='_blank'>
                 <i className="devicon-github-original colored my-auto text-3xl"></i>
                 <p className="my-auto">Github repository</p>
             </Link>
             {docsLink && 
             <>
-                <Link className="flex align-center gap-1" href={docsLink} target='_blank'>
+                <Link className="flex align-center gap-1 hover:bg-gray-300 px-2 rounded-lg" href={docsLink} target='_blank'>
                     <Image className="my-auto" src={BASE_PATH + "/documentation_icon.png"} alt="" width={32} height={32} />
                     <p className="my-auto">Documentation</p>
                 </Link>

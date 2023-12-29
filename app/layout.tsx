@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='flex flex-col'>
+      <body>
         <TopBar />
         {children}
       </body>

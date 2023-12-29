@@ -6,8 +6,8 @@ import { BASE_PATH } from "@/app/constants";
 
 export default function page() {
     return(
-        <main className='w-full h-full flex flex-col'>
-            <h1 className="mt-12 w-1/2 text-3xl font-semibold mx-auto mb-8">Work experience</h1>
+        <main className='w-full h-[95vh] flex flex-col'>
+            <h1 className="py-8 w-1/2 text-3xl font-semibold mx-auto">Work experience</h1>
             <ol className="relative border-s border-blue-200 dark:border-gray-700 mx-auto w-1/2 h-auto">                  
                 <li className="mb-10 ms-4">
                     <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>

@@ -1,9 +1,19 @@
 .topBarButton, .topBarButtonSelected{
-    border: 1px solid black;
-    padding: 4px 16px;
-    border-radius: 4px;
+    height: 5vh;
+    padding: 0 1rem;
+    border-radius: 2.5vh;
+    font-weight: 500;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .topBarButtonSelected {
     background-color: lightblue;
+    color: darkblue;
+}
+
+.topBarButton:hover {
+    background-color: rgb(208, 205, 205);
 }
