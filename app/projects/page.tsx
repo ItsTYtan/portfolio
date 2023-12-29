@@ -91,7 +91,7 @@ export default function page() {
                     </p>
 
                     <p className="my-2">
-                        A numerical analysis tool similar to Matlab, called "Scilab", was used to implement the physics into code to simulate the trajectory of 
+                        A numerical analysis tool similar to Matlab, called &quot;Scilab&quot;, was used to implement the physics into code to simulate the trajectory of 
                         the satellite
                     </p>
 
