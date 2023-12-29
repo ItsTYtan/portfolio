@@ -13,7 +13,7 @@ export default function page() {
                     <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">July 2023</time>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Teaching Assistant</h3>
-                    <Company imgPath="/nus_logo.jpg" name='National University of Singapore' />
+                    <Company imgPath="https://itstytan.github.io/portfolio/nus_logo.jpg" name='National University of Singapore' />
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">Worked as a teaching assistant for the NUS School of Computing summer courses. Facilitated project work discussions and taught algorithmic thinking</p>
                     {/* <ShowMoreButton>
                         <div>
@@ -26,7 +26,7 @@ export default function page() {
                     <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2022 - Apr 2022</time>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
-                    <Company imgPath="/dso_logo.jpg" name='DSO National Laboratories' />
+                    <Company imgPath="portfolio/dso_logo.jpg" name='DSO National Laboratories' />
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">Designed a Satellite trajectory simulator for very low earth orbit, taking into account aerodynamics of the spacecraft.</p>
                     {/* <ShowMoreButton>
                         <p>
@@ -42,7 +42,7 @@ export default function page() {
                     <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                     <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2019 - Mar 2019</time>
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
-                    <Company imgPath="/dso_logo.jpg" name='DSO National Laboratories' />
+                    <Company imgPath="/portfolio/dso_logo.jpg" name='DSO National Laboratories' />
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">Modified an artificial intelligence nerual network to detect mutated chromosomes.</p>
                 </li>
             </ol>
