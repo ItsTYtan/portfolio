@@ -3,10 +3,13 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { BASE_PATH } from "@/app/constants";
+import { Nav } from '@/app/constants';
+import TopBar from "../topbar";
 
 export default function page() {
     return(
-        <main className='w-full h-[95vh] flex flex-col'>
+        <main className='w-full flex flex-col'>
+            <TopBar currentNav={Nav.Experience} />
             <h1 className="py-8 w-1/2 text-3xl font-semibold mx-auto">Work experience</h1>
             <ol className="relative border-s border-blue-200 dark:border-gray-700 mx-auto w-1/2 h-auto">                  
                 <li className="mb-10 ms-4">

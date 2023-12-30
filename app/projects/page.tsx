@@ -4,10 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BASE_PATH } from "../constants";
+import { Nav } from '@/app/constants';
+import TopBar from "../topbar";
 
 export default function page() {
     return(
-        <main className='w-full h-[95vh]'>
+        <main className='w-full'>
+            <TopBar currentNav={Nav.Projects} />
             <h1 className="py-8 text-center">Stuff that I&apos;ve made across my internships, my time in University and in my own free time.</h1>
             <div className='flex flex-row gap-16 justify-center'>
                 <ProjectCard name='[Ba]king [Br]ead' coverImgRef={BASE_PATH + "/bakingbread_cover.jpg"}>
@@ -32,7 +35,7 @@ export default function page() {
                     <br/>
                     
                     <div className="mx-auto px-20">
-                        <Image className="mx-auto" src={BASE_PATH+ '/bakingbreadUi.png'} alt='/bakingbreadUi.png' width={450} height={450} />
+                        <Image className="mx-auto" src={BASE_PATH+ '/bakingbreadUi.png'} alt='/bakingbreadUi.png' width={420} height={420} />
                     </div>
 
                     <p className="text-center italic color-gray-300">picture of the UI</p>
@@ -58,7 +61,7 @@ export default function page() {
 
                     <div className="flex flex-wrap gap-16 items-end justify-center">
                         <div>
-                            <Image src={BASE_PATH + "/orbital_poster.png"} alt="" width={350} height={350}/>
+                            <Image src={BASE_PATH + "/orbital_poster.png"} alt="" width={320} height={350}/>
                             <p className="text-center italic color-gray-300">picture of our project poster</p>
                         </div>
                         <div>
@@ -105,7 +108,7 @@ export default function page() {
                             <video className="mx-auto" width="350" src={BASE_PATH + "/satellite_video.mp4"} autoPlay loop>
                                 <source src={BASE_PATH + "/satellite_video.mp4"} type="video/mp4" /> 
                             </video>
-                            <p className="text-center italic color-gray-300 mt-2">actual simulation of a satellite with the &quot;shuttlecock&quot; confiuguration</p>
+                            <p className="w-[350px] text-center italic color-gray-300 mt-2">actual simulation of a satellite with the &quot;shuttlecock&quot; confiuguration</p>
                         </div>
 
                     </div>
@@ -131,17 +134,17 @@ function ProjectCard({
     return(
         <>
             <button 
-                className="w-64 h-80 rounded-xl bg-gray-200 shadow-md"
+                className="w-64 h-80 rounded-xl bg-gray-300 shadow-lg"
                 onClick={() => setShowContent(true)}
             >
-            <div className="h-4/5 overflow-hidden p-4">
-                <Image className="h-full rounded-md border-black border-2" src={coverImgRef} alt="" width={288} height={0} />
-            </div>
-            <div className="h-1/5 border-t border-gray-700 flex align-center justify-center mx-auto" >
-                <p className="text-center text-blue-600 font-semibold my-auto text-lg px-2">
-                    {name}
-                </p>
-            </div>
+                <div className="h-4/5 overflow-hidden p-4">
+                    <Image className="h-full rounded-md border-black border-2 bg-white" src={coverImgRef} alt="" width={288} height={0} />
+                </div>
+                <div className="h-1/5 border-t border-gray-700 flex align-center justify-center mx-auto" >
+                    <p className="text-center text-blue-500 font-semibold my-auto text-lg px-2">
+                        {name}
+                    </p>
+                </div>
             </button>
             {showContent && 
                 <>
