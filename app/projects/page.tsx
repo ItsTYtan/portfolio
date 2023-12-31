@@ -134,14 +134,14 @@ function ProjectCard({
     return(
         <>
             <button 
-                className="w-64 h-80 rounded-xl bg-gray-300 shadow-lg"
+                className="w-64 h-80 rounded-xl bg-blue-200 shadow-md transition hover:scale-105 hover:shadow-xl"
                 onClick={() => setShowContent(true)}
             >
                 <div className="h-4/5 overflow-hidden p-4">
                     <Image className="h-full rounded-md border-black border-2 bg-white" src={coverImgRef} alt="" width={288} height={0} />
                 </div>
                 <div className="h-1/5 border-t border-gray-700 flex align-center justify-center mx-auto" >
-                    <p className="text-center text-blue-500 font-semibold my-auto text-lg px-2">
+                    <p className="text-center font-semibold my-auto text-lg px-2">
                         {name}
                     </p>
                 </div>

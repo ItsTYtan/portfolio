@@ -12,7 +12,7 @@ export default function Home() {
         <div className='my-auto'>
           <p>Hello</p>
           <h1 className='text-6xl font-semibold'>I&apos;m Tze Young</h1>
-          <p className='my-4'>Year 2 Computer Science Student</p>
+          <p className='my-4'>Year 2 Computer Science student</p>
           <Link className="flex gap-2 pl-2 rounded-md hover:bg-gray-300 hover:text-blue-500" href="https://github.com/ItsTYtan" target='_blank'>                
             <i className="devicon-github-original colored my-auto text-3xl"></i>
             <p className="my-auto">Github</p>
@@ -24,8 +24,8 @@ export default function Home() {
         </div>
         <Image className='my-auto' src={BASE_PATH + "/avatar.png"} width={400} height={400} alt='/avatar.png' />
         <div className='absolute bottom-0 left-[50%] -translate-x-1/2'>
-          <p className='mb-[-8px]'>Scroll down!</p>
-          <i className="block fa fa-angle-down text-6xl text-center" aria-hidden="true"></i>
+          <p className=''>Scroll down!</p>
+          <i className="block fa fa-angle-down text-6xl text-center animate-bounce" aria-hidden="true"></i>
         </div>
       </div>
       <div className='h-auto bg-gray-700 px-[25%]'>
