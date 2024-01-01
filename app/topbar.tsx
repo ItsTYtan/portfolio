@@ -19,7 +19,7 @@ export default function TopBar({
     }
 
     return (
-        <nav className="pt-2 sm:pl-16 w-full flex align-center h-16 pr-16 gap-2">
+        <nav className="pt-2 pl-4 sm:pl-8 md:pl-16 w-full flex align-center h-16 pr-16 gap-2">
             <Link
                 className={ButtonStyle(currentNav, Nav.Home)}
                 href='/'
