@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/app/home.module.css';
+import styles from '@/app/topbar.module.css';
 import { Nav } from '@/app/constants';
 import Link from 'next/link';
 
@@ -19,7 +19,7 @@ export default function TopBar({
     }
 
     return (
-        <section className="pt-2 pl-16 w-full flex align-center h-[5vh] pr-16 gap-2">
+        <nav className="pt-2 pl-16 w-full flex align-center h-16 pr-16 gap-2">
             <Link
                 className={ButtonStyle(currentNav, Nav.Home)}
                 href='/'
@@ -38,6 +38,6 @@ export default function TopBar({
             >
                 <p className='text-center'>Projects</p>
             </Link>
-        </section>
+        </nav>
     )
 }
