@@ -29,6 +29,7 @@ export default function Home() {
             <i className="block fa fa-angle-down text-6xl text-center animate-bounce" aria-hidden="true"></i>
         </div>
       </section>
+      
       <section className='w-full h-auto bg-gray-700'>
         <div className='max-w-[120ch] px-[5%] mx-auto'>
           <h1 className='py-4 text-4xl font-bold text-center text-white'>About me</h1>

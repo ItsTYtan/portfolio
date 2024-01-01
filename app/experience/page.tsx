@@ -10,60 +10,62 @@ export default function page() {
     return(
         <main className='w-full flex flex-col'>
             <TopBar currentNav={Nav.Experience} />
-            <h1 className="py-8 w-1/2 text-3xl font-semibold mx-auto">Work experience</h1>
-            <ol className="relative border-s border-blue-200 dark:border-gray-700 mx-auto w-1/2 h-auto">                  
-                <li className="mb-10 ms-4">
-                    <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">July 2023</time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Teaching Assistant</h3>
-                    <Company imgPath={BASE_PATH + "/nus_logo.jpg"} name='National University of Singapore' />
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">Worked as a teaching assistant for the NUS School of Computing summer courses. Facilitated project work discussions and taught algorithmic thinking</p>
-                    {/* <ShowMoreButton>
-                        <div>
-                            <Image src='/SWS.png' alt='/SWS.png' width={700} height={0} />
-                        </div>
-                        <p className="text-center mx-auto text-gray-500 italic">some photos taken during the summer course</p>
-                    </ShowMoreButton> */}
-                </li>
-                <li className="mb-10 ms-4">
-                    <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2022 - Apr 2022</time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
-                    <Company imgPath={BASE_PATH + "/dso_logo.jpg"} name='DSO National Laboratories' />
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">Designed a Satellite trajectory simulator for very low earth orbit, taking into account aerodynamics of the spacecraft.</p>
-                    {/* <ShowMoreButton>
-                        <p>
-                            The satellite trajectory simulator was programmed in a language similar to Fontran, using an open source numerical computation package platform called Scilab.
-                        </p>
-                        <video className="mx-auto" width="600" src="/satellite_video_1.mp4" autoPlay loop>
-                            <source src="/satellite_video_1.mp4" type="video/mp4" /> 
-                        </video>
-                        <p className="text-center mx-auto text-gray-500 italic">video of a simulation done during the internship</p> 
-                    </ShowMoreButton> */}
-                </li>
-                <li className="ms-4">
-                    <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2019 - Mar 2019</time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
-                    <Company imgPath={BASE_PATH + "/dso_logo.jpg"} name='DSO National Laboratories' />
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">Modified an artificial intelligence nerual network to detect mutated chromosomes.</p>
-                </li>
-            </ol>
-            <h1 className="mt-12 w-1/2 text-3xl font-semibold mx-auto mb-8">Education</h1>
-            <ol className="relative border-s border-blue-200 dark:border-gray-700 mx-auto w-1/2 h-auto">                  
-                <li className="mb-10 ms-4">
-                    <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2022 - 2026</time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">National University of Singapore</h3>
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">Bachelor Of Computing In Computer Science</p>
-                </li>
-                <li className="mb-10 ms-4">
-                    <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                    <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2017 - 2019</time>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Anglo-Chinese Junior College</h3>
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">GCE A Levels</p>
-                </li>
-            </ol>
+            <section className="max-w-[120ch] px-[5%] mx-auto">
+                <h1 className="text-3xl font-semibold pb-8">Work experience</h1>
+                <ol className="relative border-s border-blue-200 dark:border-gray-700 h-auto">                  
+                    <li className="mb-10 ms-4">
+                        <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">July 2023</time>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Teaching Assistant</h3>
+                        <Company imgPath={BASE_PATH + "/nus_logo.jpg"} name='National University of Singapore' />
+                        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Worked as a teaching assistant for the NUS School of Computing summer courses. Facilitated project work discussions and taught algorithmic thinking</p>
+                        {/* <ShowMoreButton>
+                            <div>
+                                <Image src='/SWS.png' alt='/SWS.png' width={700} height={0} />
+                            </div>
+                            <p className="text-center mx-auto text-gray-500 italic">some photos taken during the summer course</p>
+                        </ShowMoreButton> */}
+                    </li>
+                    <li className="mb-10 ms-4">
+                        <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2022 - Apr 2022</time>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
+                        <Company imgPath={BASE_PATH + "/dso_logo.jpg"} name='DSO National Laboratories' />
+                        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Designed a Satellite trajectory simulator for very low earth orbit, taking into account aerodynamics of the spacecraft.</p>
+                        {/* <ShowMoreButton>
+                            <p>
+                                The satellite trajectory simulator was programmed in a language similar to Fontran, using an open source numerical computation package platform called Scilab.
+                            </p>
+                            <video className="mx-auto" width="600" src="/satellite_video_1.mp4" autoPlay loop>
+                                <source src="/satellite_video_1.mp4" type="video/mp4" /> 
+                            </video>
+                            <p className="text-center mx-auto text-gray-500 italic">video of a simulation done during the internship</p> 
+                        </ShowMoreButton> */}
+                    </li>
+                    <li className="ms-4">
+                        <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Jan 2019 - Mar 2019</time>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Research Assistant</h3>
+                        <Company imgPath={BASE_PATH + "/dso_logo.jpg"} name='DSO National Laboratories' />
+                        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Modified an artificial intelligence nerual network to detect mutated chromosomes.</p>
+                    </li>
+                </ol>
+                <h1 className="mt-12 text-3xl font-semibold mx-auto mb-8">Education</h1>
+                <ol className="relative border-s border-blue-200 dark:border-gray-700h-auto">                  
+                    <li className="mb-10 ms-4">
+                        <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2022 - 2026</time>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">National University of Singapore</h3>
+                        <p className="text-base font-normal text-gray-500 dark:text-gray-400">Bachelor Of Computing In Computer Science</p>
+                    </li>
+                    <li className="mb-10 ms-4">
+                        <div className="absolute w-3 h-3 bg-blue-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2017 - 2019</time>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Anglo-Chinese Junior College</h3>
+                        <p className="text-base font-normal text-gray-500 dark:text-gray-400">GCE A Levels</p>
+                    </li>
+                </ol>
+            </section>
         </main>
     )
 }
